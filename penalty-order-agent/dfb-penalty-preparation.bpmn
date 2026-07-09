@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:zeebe="http://camunda.org/schema/zeebe/1.0" xmlns:modeler="http://camunda.org/schema/modeler/1.0" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.48.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.8.0">
+  <bpmn:process id="DFBPenaltyPreparation" name="DFB Penalty Order Preparation" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_MatchScheduled" name="Knockout Match&#10;Scheduled">
+      <bpmn:outgoing>Flow_to_Agent</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:adHocSubProcess id="AgentProposePenaltyOrder" name="AI: Propose Penalty Order" zeebe:modelerTemplate="io.camunda.connectors.agenticai.aiagent.jobworker.v1" zeebe:modelerTemplateVersion="5" zeebe:modelerTemplateIcon="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTYiIGN5PSIxNiIgcj0iMTYiIGZpbGw9IiNBNTZFRkYiLz4KPG1hc2sgaWQ9InBhdGgtMi1vdXRzaWRlLTFfMTg1XzYiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHg9IjQiIHk9IjQiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iYmxhY2siPgo8cmVjdCBmaWxsPSJ3aGl0ZSIgeD0iNCIgeT0iNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIvPgo8L21hc2s+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMjAuMDEwNSAxMi4wOTg3QzE4LjQ5IDEwLjU4OTQgMTcuMTU5NCA4LjEwODE0IDE2LjE3OTkgNi4wMTEwM0MxNi4xNTIgNi4wMDQ1MSAxNi4xMTc2IDYgMTYuMDc5NCA2QzE2LjA0MTEgNiAxNi4wMDY2IDYuMDA0NTEgMTUuOTc4OCA2LjAxMTA0QzE0Ljk5OTQgOC4xMDgxNCAxMy42Njk3IDEwLjU4ODkgMTIuMTQ4MSAxMi4wOTgxQzEwLjYyNjkgMTMuNjA3MSA4LjEyNTY4IDE0LjkyNjQgNi4wMTE1NyAxNS44OTgxQzYuMDA0NzQgMTUuOTI2MSA2IDE1Ljk2MTEgNiAxNkM2IDE2LjAzODcgNi4wMDQ2OCAxNi4wNzM2IDYuMDExNDQgMTYuMTAxNEM4LjEyNTE5IDE3LjA3MjkgMTAuNjI2MiAxOC4zOTE5IDEyLjE0NzcgMTkuOTAxNkMxMy42Njk3IDIxLjQxMDcgMTQuOTk5NiAyMy44OTIgMTUuOTc5MSAyNS45ODlDMTYuMDA2OCAyNS45OTU2IDE2LjA0MTEgMjYgMTYuMDc5MyAyNkMxNi4xMTc1IDI2IDE2LjE1MTkgMjUuOTk1NCAxNi4xNzk2IDI1Ljk4OUMxNy4xNTkxIDIzLjg5MiAxOC40ODg4IDIxLjQxMSAyMC4wMDk5IDE5LjkwMjFNMjAuMDA5OSAxOS45MDIxQzIxLjUyNTMgMTguMzk4NyAyMy45NDY1IDE3LjA2NjkgMjUuOTkxNSAxNi4wODI0QzI1Ljk5NjUgMTYuMDU5MyAyNiAxNi4wMzEgMjYgMTUuOTk5N0MyNiAxNS45Njg0IDI1Ljk5NjUgMTUuOTQwMyAyNS45OTE1IDE1LjkxNzFDMjMuOTQ3NCAxNC45MzI3IDIxLjUyNTkgMTMuNjAxIDIwLjAxMDUgMTIuMDk4NyIgZmlsbD0id2hpdGUiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0yMC4wMTA1IDEyLjA5ODdDMTguNDkgMTAuNTg5NCAxNy4xNTk0IDguMTA4MTQgMTYuMTc5OSA2LjAxMTAzQzE2LjE1MiA2LjAwNDUxIDE2LjExNzYgNiAxNi4wNzk0IDZDMTYuMDQxMSA2IDE2LjAwNjYgNi4wMDQ1MSAxNS45Nzg4IDYuMDExMDRDMTQuOTk5NCA4LjEwODE0IDEzLjY2OTcgMTAuNTg4OSAxMi4xNDgxIDEyLjA5ODFDMTAuNjI2OSAxMy42MDcxIDguMTI1NjggMTQuOTI2NCA2LjAxMTU3IDE1Ljg5ODFDNi4wMDQ3NCAxNS45MjYxIDYgMTUuOTYxMSA2IDE2QzYgMTYuMDM4NyA2LjAwNDY4IDE2LjA3MzYgNi4wMTE0NCAxNi4xMDE0QzguMTI1MTkgMTcuMDcyOSAxMC42MjYyIDE4LjM5MTkgMTIuMTQ3NyAxOS45MDE2QzEzLjY2OTcgMjEuNDEwNyAxNC45OTk2IDIzLjg5MiAxNS45NzkxIDI1Ljk4OUMxNi4wMDY4IDI1Ljk5NTYgMTYuMDQxMSAyNiAxNi4wNzkzIDI2QzE2LjExNzUgMjYgMTYuMTUxOSAyNS45OTU0IDE2LjE3OTYgMjUuOTg5QzE3LjE1OTEgMjMuODkyIDE4LjQ4ODggMjEuNDExIDIwLjAwOTkgMTkuOTAyMU0yMC4wMDk5IDE5LjkwMjFDMjEuNTI1MyAxOC4zOTg3IDIzLjk0NjUgMTcuMDY2OSAyNS45OTE1IDE2LjA4MjRDMjUuOTk2NSAxNi4wNTkzIDI2IDE2LjAzMSAyNiAxNS45OTk3QzI2IDE1Ljk2ODQgMjUuOTk2NSAxNS45NDAzIDI1Ljk5MTUgMTUuOTE3MUMyMy45NDc0IDE0LjkzMjcgMjEuNTI1OSAxMy42MDEgMjAuMDEwNSAxMi4wOTg3IiBzdHJva2U9IiM0OTFEOEIiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgbWFzaz0idXJsKCNwYXRoLTItb3V0c2lkZS0xXzE4NV82KSIvPgo8L3N2Zz4K">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda.agenticai:aiagent-job-worker:1" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input target="penaltyAgent" />
+          <zeebe:input source="anthropic" target="provider.type" />
+          <zeebe:input source="{{secrets.ANTHROPIC_API_KEY}}" target="provider.anthropic.authentication.apiKey" />
+          <zeebe:input source="claude-sonnet-4-5" target="provider.anthropic.model.model" />
+          <zeebe:input source="=&#34;You are the DFB penalty preparation analyst. Your task: produce a ranked penalty order covering ALL 11 positions for the upcoming shootout.\n\nProcess:\n1. Call GetMatchSquad to list every available player.\n2. For each outfield player currently on the field, call GetPlayerPenaltyStatistics.\n3. For any player who has played more than 90 minutes, also call CheckPlayerFitness. Exclude players with fitnessScore below 60 or any medical flags.\n4. Rank 11 candidates from most to least suitable: prioritise penalty success rate, big-game experience, and low fatigue.\n5. Call RecordPenaltyProposal exactly once with the full ranked list and a brief rationale.\n\nCRITICAL: all 11 positions must be filled. The 2026 World Cup exit to Paraguay happened because nobody had planned past position 5 - Goretzka refused twice, Tah who had never taken a professional penalty stepped up and missed. This must never happen again. Your final response must be valid JSON: { \&#34;proposedOrder\&#34;: [...], \&#34;selectionRationale\&#34;: \&#34;...\&#34; }&#34;" target="data.systemPrompt.prompt" />
+          <zeebe:input source="=&#34;Match: &#34; + matchId + &#34;. Minutes played so far (including extra time): &#34; + string(minutesPlayed) + &#34;. Please prepare the full 11-player penalty order now.&#34;" target="data.userPrompt.prompt" />
+          <zeebe:input target="agentContext" />
+          <zeebe:input source="in-process" target="data.memory.storage.type" />
+          <zeebe:input source="=20" target="data.memory.contextWindowSize" />
+          <zeebe:input source="20" target="data.limits.maxModelCalls" />
+          <zeebe:input source="WAIT_FOR_TOOL_CALL_RESULTS" target="data.events.behavior" />
+          <zeebe:input source="text" target="data.response.format.type" />
+          <zeebe:input source="true" target="data.response.format.parseJson" />
+          <zeebe:input source="=false" target="data.response.includeAssistantMessage" />
+          <zeebe:input source="false" target="data.response.includeAgentContext" />
+          <zeebe:output source="=agent" target="penaltyAgent" />
+        </zeebe:ioMapping>
+        <zeebe:taskHeaders>
+          <zeebe:header key="elementTemplateVersion" value="5" />
+          <zeebe:header key="elementTemplateId" value="io.camunda.connectors.agenticai.aiagent.jobworker.v1" />
+          <zeebe:header key="retryBackoff" value="PT0S" />
+        </zeebe:taskHeaders>
+        <zeebe:adHoc outputCollection="toolCallResults" outputElement="={&#10;  id: toolCall._meta.id,&#10;  name: toolCall._meta.name,&#10;  content: toolCallResult&#10;}" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_to_Agent</bpmn:incoming>
+      <bpmn:outgoing>Flow_0o7syyd</bpmn:outgoing>
+      <bpmn:serviceTask id="GetMatchSquad" name="Get Match Squad">
+        <bpmn:documentation>Get all players in the squad for this match: position, shirt number, and whether each is currently on the field, already substituted off, or is a bench player who has not yet entered. Call this first — every subsequent decision depends on this list. Returns: { players: [{ playerId, name, position, shirtNumber, onField: bool, minutesPlayed: number }] }.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda.connectors.HttpJson.v2" retries="3" />
+          <zeebe:ioMapping>
+            <zeebe:input source="=&#34;GET&#34;" target="method" />
+            <zeebe:input source="=&#34;https://api.dfb.de/v1/matches/&#34; + matchId + &#34;/squad&#34;" target="url" />
+            <zeebe:input source="=&#34;Bearer {{secrets.DFB_API_KEY}}&#34;" target="headers.Authorization" />
+            <zeebe:output source="=response.body.players" target="toolCallResult" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
+      <bpmn:serviceTask id="GetPlayerPenaltyStatistics" name="Get Player Penalty Statistics">
+        <bpmn:documentation>Retrieve career and recent penalty statistics for one player. Returns: { attempts, scored, saved, missed, successRatePct, lastFivePenalties: ["scored"|"saved"|"missed"], bigGameAttempts, confidenceScore: 0–100 }. Call for every outfield player currently on the field. Do not call for goalkeepers. Use successRatePct and confidenceScore as the primary ranking signals.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda.connectors.HttpJson.v2" retries="3" />
+          <zeebe:ioMapping>
+            <zeebe:input source="=&#34;GET&#34;" target="method" />
+            <zeebe:input source="=&#34;https://api.dfb.de/v1/players/&#34; + fromAi(toolCall.playerId, &#34;ID of the player whose penalty statistics to retrieve&#34;, &#34;string&#34;) + &#34;/penalty-stats&#34;" target="url" />
+            <zeebe:input source="=&#34;Bearer {{secrets.DFB_API_KEY}}&#34;" target="headers.Authorization" />
+            <zeebe:output source="=response.body" target="toolCallResult" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
+      <bpmn:serviceTask id="CheckPlayerFitness" name="Check Player Fitness">
+        <bpmn:documentation>Check the real-time physical condition of a player at this point in the match. Returns: { fitnessScore: 0–100, fatigueLevel: "low"|"medium"|"high", crampingObserved: bool, medicalFlags: [string] }. Call for any player who has played more than 90 minutes, or who showed visible distress or cramping. Exclude players with fitnessScore below 60 or any non-empty medicalFlags from the penalty list.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:taskDefinition type="io.camunda.connectors.HttpJson.v2" retries="3" />
+          <zeebe:ioMapping>
+            <zeebe:input source="=&#34;GET&#34;" target="method" />
+            <zeebe:input source="=&#34;https://api.dfb.de/v1/matches/&#34; + matchId + &#34;/players/&#34; + fromAi(toolCall.playerId, &#34;ID of the player whose fitness to check&#34;, &#34;string&#34;) + &#34;/fitness&#34;" target="url" />
+            <zeebe:input source="=&#34;Bearer {{secrets.DFB_API_KEY}}&#34;" target="headers.Authorization" />
+            <zeebe:output source="=response.body" target="toolCallResult" />
+          </zeebe:ioMapping>
+        </bpmn:extensionElements>
+      </bpmn:serviceTask>
+      <bpmn:scriptTask id="RecordPenaltyProposal" name="Record Penalty Proposal" scriptFormat="feel">
+        <bpmn:documentation>Commit the proposed 11-player penalty order. Call this exactly once — only after squad data, penalty statistics, and fitness checks have been gathered for all candidates. The order array must contain exactly 11 entries ranked first to eleventh taker. Do not call this tool more than once.</bpmn:documentation>
+        <bpmn:extensionElements>
+          <zeebe:script expression="={&#10;  matchId: matchId,&#10;  proposedOrder: fromAi(&#10;    toolCall.order,&#10;    &#34;Array of exactly 11 penalty taker objects ranked first to eleventh. Each entry: { playerId, playerName, shirtNumber, position, penaltySuccessRatePct, reasoning }&#34;,&#10;    &#34;array&#34;&#10;  ),&#10;  selectionRationale: fromAi(&#10;    toolCall.rationale,&#10;    &#34;Short overall rationale explaining the key factors — fitness, experience, success rate — that drove the ranking&#34;,&#10;    &#34;string&#34;&#10;  ),&#10;  status: &#34;proposed&#34;&#10;}" resultVariable="toolCallResult" />
+        </bpmn:extensionElements>
+      </bpmn:scriptTask>
+    </bpmn:adHocSubProcess>
+    <bpmn:exclusiveGateway id="Gateway_JoinBeforeCoach" name="">
+      <bpmn:incoming>Flow_No_BackToCoach</bpmn:incoming>
+      <bpmn:incoming>Flow_0o7syyd</bpmn:incoming>
+      <bpmn:outgoing>Flow_1jq0om6</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:userTask id="UserTask_CoachReview" name="Coach Reviews and Approves Penalty Order">
+      <bpmn:extensionElements>
+        <zeebe:userTask />
+        <zeebe:assignmentDefinition assignee="=coachUserId" />
+        <zeebe:formDefinition externalReference="dfb:penalty-order-review" />
+        <zeebe:ioMapping>
+          <zeebe:input source="=penaltyAgent.responseJson.proposedOrder" target="proposedOrder" />
+          <zeebe:input source="=penaltyAgent.responseJson.selectionRationale" target="aiRationale" />
+          <zeebe:input source="=if (is defined(playerConfirmations)) then playerConfirmations[item.confirmed = false] else []" target="refusedPlayers" />
+          <zeebe:output source="=approvedOrder" target="penaltyOrder" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_1jq0om6</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_PlayerConfirmation</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:userTask id="UserTask_PlayerConfirmation" name="Player Confirms Penalty Willingness">
+      <bpmn:extensionElements>
+        <zeebe:userTask />
+        <zeebe:assignmentDefinition assignee="=player.playerId" />
+        <zeebe:formDefinition externalReference="dfb:penalty-confirmation" />
+        <zeebe:ioMapping>
+          <zeebe:input source="=player" target="assignedPlayer" />
+          <zeebe:input source="=loopCounter" target="penaltyPosition" />
+          <zeebe:output source="={playerId: player.playerId, playerName: player.playerName, position: loopCounter, confirmed: confirmed, note: if (is defined(playerNote)) then playerNote else null}" target="confirmation" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_to_PlayerConfirmation</bpmn:incoming>
+      <bpmn:outgoing>Flow_02i3hls</bpmn:outgoing>
+      <bpmn:multiInstanceLoopCharacteristics>
+        <bpmn:extensionElements>
+          <zeebe:loopCharacteristics inputCollection="=penaltyOrder" inputElement="player" outputCollection="playerConfirmations" outputElement="=confirmation" />
+        </bpmn:extensionElements>
+      </bpmn:multiInstanceLoopCharacteristics>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway_AllConfirmed" name="All 11 Players&#10;Confirmed?">
+      <bpmn:incoming>Flow_02i3hls</bpmn:incoming>
+      <bpmn:outgoing>Flow_No_BackToCoach</bpmn:outgoing>
+      <bpmn:outgoing>Flow_0303dwd</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="ServiceTask_StoreFinalOrder" name="Store Confirmed Penalty Order">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda.connectors.HttpJson.v2" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="=&#34;POST&#34;" target="method" />
+          <zeebe:input source="=&#34;https://api.dfb.de/v1/matches/&#34; + matchId + &#34;/penalty-order/confirmed&#34;" target="url" />
+          <zeebe:input source="=&#34;Bearer {{secrets.DFB_API_KEY}}&#34;" target="headers.Authorization" />
+          <zeebe:input source="={matchId: matchId, order: penaltyOrder, confirmations: playerConfirmations, lockedAt: now()}" target="body" />
+          <zeebe:output source="=response.body" target="confirmedOrderRecord" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_0303dwd</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_Notify</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:serviceTask id="ServiceTask_NotifyTeam" name="Notify Coaching Staff and All Players">
+      <bpmn:extensionElements>
+        <zeebe:taskDefinition type="io.camunda.connectors.HttpJson.v2" retries="3" />
+        <zeebe:ioMapping>
+          <zeebe:input source="=&#34;POST&#34;" target="method" />
+          <zeebe:input source="=&#34;https://api.dfb.de/v1/notifications/team-broadcast&#34;" target="url" />
+          <zeebe:input source="=&#34;Bearer {{secrets.DFB_API_KEY}}&#34;" target="headers.Authorization" />
+          <zeebe:input source="={&#10;  matchId: matchId,&#10;  type: &#34;PENALTY_ORDER_LOCKED&#34;,&#10;  finalOrder: penaltyOrder,&#10;  confirmations: playerConfirmations,&#10;  message: &#34;Penalty order is locked and confirmed by all 11 takers. Every player knows their position. No hesitation, no chaos during the shootout.&#34;&#10;}" target="body" />
+        </zeebe:ioMapping>
+      </bpmn:extensionElements>
+      <bpmn:incoming>Flow_to_Notify</bpmn:incoming>
+      <bpmn:outgoing>Flow_to_End</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:endEvent id="EndEvent_OrderLocked" name="Penalty Order Locked&#10;and Communicated">
+      <bpmn:incoming>Flow_to_End</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_to_Agent" sourceRef="StartEvent_MatchScheduled" targetRef="AgentProposePenaltyOrder" />
+    <bpmn:sequenceFlow id="Flow_to_PlayerConfirmation" sourceRef="UserTask_CoachReview" targetRef="UserTask_PlayerConfirmation" />
+    <bpmn:sequenceFlow id="Flow_No_BackToCoach" name="No — reassign reluctant players" sourceRef="Gateway_AllConfirmed" targetRef="Gateway_JoinBeforeCoach">
+      <bpmn:conditionExpression>=some c in playerConfirmations satisfies c.confirmed = false</bpmn:conditionExpression>
+    </bpmn:sequenceFlow>
+    <bpmn:sequenceFlow id="Flow_to_Notify" sourceRef="ServiceTask_StoreFinalOrder" targetRef="ServiceTask_NotifyTeam" />
+    <bpmn:sequenceFlow id="Flow_to_End" sourceRef="ServiceTask_NotifyTeam" targetRef="EndEvent_OrderLocked" />
+    <bpmn:sequenceFlow id="Flow_0o7syyd" sourceRef="AgentProposePenaltyOrder" targetRef="Gateway_JoinBeforeCoach" />
+    <bpmn:sequenceFlow id="Flow_1jq0om6" sourceRef="Gateway_JoinBeforeCoach" targetRef="UserTask_CoachReview" />
+    <bpmn:sequenceFlow id="Flow_02i3hls" sourceRef="UserTask_PlayerConfirmation" targetRef="Gateway_AllConfirmed" />
+    <bpmn:sequenceFlow id="Flow_0303dwd" name="Yes — all confirmed" sourceRef="Gateway_AllConfirmed" targetRef="ServiceTask_StoreFinalOrder" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="DFBPenaltyPreparation">
+      <bpmndi:BPMNShape id="Shape_StartEvent" bpmnElement="StartEvent_MatchScheduled">
+        <dc:Bounds x="162" y="200" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="141" y="243" width="79" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GatewayJoin" bpmnElement="Gateway_JoinBeforeCoach" isMarkerVisible="true">
+        <dc:Bounds x="575" y="193" width="50" height="50" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_CoachReview" bpmnElement="UserTask_CoachReview">
+        <dc:Bounds x="660" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_PlayerConfirmation" bpmnElement="UserTask_PlayerConfirmation">
+        <dc:Bounds x="800" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GatewayConfirmed" bpmnElement="Gateway_AllConfirmed" isMarkerVisible="true">
+        <dc:Bounds x="945" y="193" width="50" height="50" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="936" y="155.5" width="67" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Store" bpmnElement="ServiceTask_StoreFinalOrder">
+        <dc:Bounds x="1060" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Notify" bpmnElement="ServiceTask_NotifyTeam">
+        <dc:Bounds x="1200" y="178" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_EndEvent" bpmnElement="EndEvent_OrderLocked">
+        <dc:Bounds x="1342" y="200" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1323" y="243" width="74" height="53" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_AgentSubProcess" bpmnElement="AgentProposePenaltyOrder" isExpanded="true">
+        <dc:Bounds x="250" y="80" width="290" height="280" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GetMatchSquad" bpmnElement="GetMatchSquad">
+        <dc:Bounds x="280" y="118" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_CheckFitness" bpmnElement="CheckPlayerFitness">
+        <dc:Bounds x="280" y="220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_GetPenaltyStats" bpmnElement="GetPlayerPenaltyStatistics">
+        <dc:Bounds x="410" y="118" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_RecordProposal" bpmnElement="RecordPenaltyProposal">
+        <dc:Bounds x="410" y="220" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Edge_Flow_to_Agent" bpmnElement="Flow_to_Agent">
+        <di:waypoint x="198" y="218" />
+        <di:waypoint x="250" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0o7syyd_di" bpmnElement="Flow_0o7syyd">
+        <di:waypoint x="540" y="218" />
+        <di:waypoint x="575" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_No_BackToCoach" bpmnElement="Flow_No_BackToCoach">
+        <di:waypoint x="970" y="243" />
+        <di:waypoint x="970" y="360" />
+        <di:waypoint x="600" y="360" />
+        <di:waypoint x="600" y="243" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="765" y="376" width="81" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1jq0om6_di" bpmnElement="Flow_1jq0om6">
+        <di:waypoint x="625" y="218" />
+        <di:waypoint x="660" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_to_PlayerConfirmation" bpmnElement="Flow_to_PlayerConfirmation">
+        <di:waypoint x="760" y="218" />
+        <di:waypoint x="800" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02i3hls_di" bpmnElement="Flow_02i3hls">
+        <di:waypoint x="900" y="218" />
+        <di:waypoint x="945" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0303dwd_di" bpmnElement="Flow_0303dwd">
+        <di:waypoint x="995" y="218" />
+        <di:waypoint x="1060" y="218" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1001" y="186" width="49" height="27" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_to_Notify" bpmnElement="Flow_to_Notify">
+        <di:waypoint x="1160" y="218" />
+        <di:waypoint x="1200" y="218" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_to_End" bpmnElement="Flow_to_End">
+        <di:waypoint x="1300" y="218" />
+        <di:waypoint x="1342" y="218" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
